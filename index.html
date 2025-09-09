@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body
+    class="min-h-screen bg-[url('/imgs/back.jpg')] bg-no-repeat bg-cover bg-center flex items-center justify-center p-5"
+  >
+    <div class="container max-w-[80vh] bg-blue-100 min-h-[80vh] shadow-lg px-5">
+      <h1 class="text-4xl font-bold text-white drop-shadow-lg mt-5">
+        Todo List[Tailwind]
+      </h1>
+
+      <div class="flex">
+        <section class="priorityWrapper flex items-center mt-2">
+          <span class="priorityLabel mx-1 bg-white">중요도</span>
+          <select id="prioritySelect" class="max-w-[70%]">
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
+        </section>
+
+        <section class="cycleWrapper flex items-center mt-2">
+          <span class="cycleLabel mx-1 bg-white">주기</span>
+          <select id="cycleSelect">
+            <option value="month">Month</option>
+            <option value="week">Week</option>
+            <option value="day">Day</option>
+          </select>
+        </section>
+      </div>
+
+      <div class="flex justify-between">
+        <div>
+      <section class="input-area flex justify-start p-1">
+        <input type="date" name="dueDate" class="me-1 my-3 px-3 h-8 max-w-[20%]" id="deadline"/>
+        <input
+          type="text"
+          class="me-1 my-3 px-3 h-8 rounded max-w-[60%]"
+          id="task-input"
+        />
+
+        <button
+          class="max-w-[10%] my-3 p-2 h-8 rounded flex items-center justify-center"
+          id="add-button"
+        >
+          +
+        </button>
+        </div>
+        <select id="sort" class="my-3 h-8 min-w-[10%] ms-1">
+          <option value="" disabled selected>정렬</option>
+          <option value="중요도">중요도</option>
+          <option value="마감일">마감일</option>
+        </select>
+      </section>
+      </div>
+      <section class="task-area border-2 border-gray-300">
+        <div class="flex justify-start relative task-tabs p-1">
+          <div
+            id="under-line"
+            class="h-1 w-[7%] bg-pink-300 bottom-1 absolute"
+          ></div>
+          <div class="p-1 text-center" id="all">ALL</div>
+          <div class="p-1" id="ndone">NDONE</div>
+          <div class="p-1" id="done">DONE</div>
+        </div>
+        <div id="task-board"></div>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
