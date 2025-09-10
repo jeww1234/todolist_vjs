@@ -170,7 +170,7 @@ const render = () => {
               list[i].cycle
             )}</div>
             </div>
-            <div class="flex justify-between items-center p-1">
+            <div class="flex justify-between items-center p-[5px]">
 
             <div class="task-done">${list[i].taskContent}</div>
 
@@ -192,15 +192,15 @@ const render = () => {
               list[i].cycle
             )}</div>
             </div>
-            <div class="flex justify-between items-center p-1">
+            <div class="flex justify-between items-center px-[10px]">
 
             <div class="task-ndone" style= "color:${color}">${
         list[i].taskContent
       }</div>
 
             <div>
-              <button class="check-btn" data-id="${list[i].id}">Check</button>
-              <button class="delete-btn" data-id="${list[i].id}">Delete</button>
+              <button class="check-btn bg-[#ccc]" data-id="${list[i].id}">Check</button>
+              <button class="delete-btn bg-[#ccc]" data-id="${list[i].id}">Delete</button>
             </div>
             </div>
 

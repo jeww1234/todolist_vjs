@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -86,31 +71,36 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-#task-input{
+#task-input {
   caret-color: auto;
 }
 
-.task-ndone{
+.task-ndone {
   font-size: clamp(12px, 2vw, 16px);
 }
-.task-done{
+.task-done {
   text-decoration: line-through;
   font-size: clamp(12px, 2vw, 16px);
 }
-.task-tabs div{
+.task-tabs div {
   cursor: pointer;
 }
 
-#prioritySelect, .priorityLabel, #cycleSelect, .cycleLabel, .priority-area, .cycle-area{
+#prioritySelect,
+.priorityLabel,
+#cycleSelect,
+.cycleLabel,
+.priority-area,
+.cycle-area {
   font-size: clamp(10px, 1.8vw, 12px);
   padding: clamp(3px, 1vw, 6px);
 }
-.pc-box{
+.pc-box {
   border-bottom: 0.5px dotted gray;
   border-top: 1px solid gray;
 }
 
-.input-area{
+.input-area {
   font-size: clamp(10px, 2vw, 16px);
 }
 input[type="date"]::-webkit-datetime-edit {
